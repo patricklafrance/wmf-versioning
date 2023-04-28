@@ -1,0 +1,14 @@
+{
+  "name": "wmf-poc-template",
+  "version": "1.0.0",
+  "description": "Template to create POC related to Webpack Module Federation",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "reset": "pnpm run \"/^reset:.*/\"",
+    "reset:node-modules": "pnpm -r --include-workspace-root --parallel exec pnpm dlx rimraf node_modules",
+    "reset:lock-file": "pnpm dlx rimraf pnpm-lock.yaml"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
