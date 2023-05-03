@@ -1,7 +1,7 @@
 {
   "name": "wmf-versioning",
   "version": "0.0.0",
-  "description": "POC to test Webpack Module Federation shared dependency version capabilities",
+  "description": "POC to test Webpack Module Federation shared dependency versioning capabilities",
   "private": true,
   "scripts": {
     "dev": "pnpm -r --parallel dev",

@@ -176,7 +176,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-1.json
+// remote-1/package.json
 
 {
     "react": "18.2.0",
@@ -186,7 +186,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-2.json
+// remote-2/package.json
 
 {
     "react": "18.2.0",
@@ -302,7 +302,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-1.json
+// remote-1/package.json
 
 {
     "react": "18.2.0",
@@ -312,7 +312,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-2.json
+// remote-2/package.json
 
 {
     "react": "18.2.0",
@@ -342,7 +342,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-1.json
+// remote-1/package.json
 
 {
     "react": "18.2.0",
@@ -352,7 +352,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-2.json
+// remote-2/package.json
 
 {
     "react": "18.2.0",
@@ -441,7 +441,7 @@ The following warning is printed and the host application and the remote modules
 #### Same test as the previous one but with the host application and remote-2 also specifying a requiredVersion
 
 ```js
-// host/remote-2.json
+// remote-2/package.json
 
 {
     "react": "18.2.0",
@@ -546,7 +546,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-1.json
+// remote-1/package.json
 
 {
     "react": "18.2.0",
@@ -556,7 +556,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-2.json
+// remote-2/package.json
 
 {
     "react": "18.2.0",
@@ -653,7 +653,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-1.json
+// remote-1/package.json
 
 {
     "react": "17.0.2",
@@ -664,7 +664,7 @@ With the following dependencies:
 ```
 
 ```js
-// host/remote-2.json
+// remote-2/package.json
 
 {
     "react": "18.2.0",
