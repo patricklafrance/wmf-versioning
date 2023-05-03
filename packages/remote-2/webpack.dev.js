@@ -3,11 +3,9 @@
 import ModuleFederationPlugin from "webpack/lib/container/ModuleFederationPlugin.js";
 
 /** @type {import("webpack").Configuration} */
-
 export default {
     mode: "development",
     target: "web",
-    devtool: "inline-source-map",
     entry: "./src/index.js",
     output: {
         publicPath: "http://localhost:8082/",
@@ -50,14 +48,24 @@ export default {
               "./HelloWorld.jsx": "./src/HelloWorld.jsx"
             },
             shared: {
-              "react": {
-                singleton: true,
-                strictVersion: true
-              },
-              "react-dom": {
-                singleton: true,
-                strictVersion: true
-              }
+                "react": {
+                    singleton: true
+                },
+                "react-dom": {
+                    singleton: true
+                },
+                "react-router": {
+                    singleton: true
+                },
+                "react-router-dom": {
+                    singleton: true
+                },
+                "useless-lib": {
+                    singleton: true
+                },
+                "shared": {
+                    singleton: true
+                }
             }
         })
     ]

@@ -29,6 +29,5 @@
         "type": "es6",
         // Prevent SWC from exporting the `__esModule` property.
         "strict": true
-    },
-    "sourceMaps": true
+    }
 }

@@ -1,10 +1,12 @@
 {
-  "name": "wmf-poc-template",
-  "version": "1.0.0",
-  "description": "Template to create POC related to Webpack Module Federation",
+  "name": "wmf-versioning",
+  "version": "0.0.0",
+  "description": "POC to test Webpack Module Federation shared dependency version capabilities",
   "private": true,
   "scripts": {
     "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r --parallel build",
+    "serve-build": "pnpm -r --parallel serve-build",
     "reset": "pnpm run \"/^reset:.*/\"",
     "reset:node-modules": "pnpm -r --include-workspace-root --parallel exec pnpm dlx rimraf node_modules",
     "reset:lock-file": "pnpm dlx rimraf pnpm-lock.yaml"

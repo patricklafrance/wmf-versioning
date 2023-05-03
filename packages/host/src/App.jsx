@@ -1,14 +1,12 @@
-import { lazy } from "react";
-
-const Remote1HelloWorld = lazy(() => import("remote1/HelloWorld.jsx"));
-const Remote2HelloWorld = lazy(() => import("remote2/HelloWorld.jsx"));
+import { Link } from "react-router-dom";
+import uselessLib from "useless-lib";
+import { version } from "react";
 
 export function App() {
     return (
         <>
-            <div>Hello from host application</div>
-            <Remote1HelloWorld />
-            <Remote2HelloWorld />
+            <div>Hello from host application <strong>(react v{version} - useless-lib v{uselessLib.version})</strong></div>
+            <Link to="/another">Another page</Link>
         </>
     );
 }

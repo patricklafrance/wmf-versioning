@@ -1,21 +1,21 @@
 // ts-check
 
-import HtmlWebpackPlugin from "html-webpack-plugin";
 import ModuleFederationPlugin from "webpack/lib/container/ModuleFederationPlugin.js";
+import path from "path";
 
 /** @type {import("webpack").Configuration} */
 export default {
-    mode: "development",
+    mode: "production",
     target: "web",
-    devtool: "inline-source-map",
-    devServer: {
-        port: 8080,
-        historyApiFallback: true
-    },
     entry: "./src/index.js",
     output: {
+        path: path.resolve("dist"),
         // The trailing / is very important, otherwise paths will ne be resolved correctly.
-        publicPath: "http://localhost:8080/"
+        publicPath: "http://localhost:8081/",
+        clean: true
+    },
+    optimization: {
+        minimize: false
     },
     module: {
         rules: [
@@ -41,24 +41,22 @@ export default {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: "host",
-            remotes: {
-                remote1: "remote1@http://localhost:8081/remoteEntry.js",
-                remote2: "remote2@http://localhost:8082/remoteEntry.js"
+            name: "remote1",
+            filename: "remoteEntry.js",
+            exposes: {
+              "./HelloWorld.jsx": "./src/HelloWorld.jsx"
             },
             shared: {
                 "react": {
-                  singleton: true,
-                  strictVersion: true
+                    singleton: true
                 },
                 "react-dom": {
-                  singleton: true,
-                  strictVersion: true
+                    singleton: true
+                },
+                "useless-lib": {
+                    singleton: true
                 }
             }
-        }),
-        new HtmlWebpackPlugin({
-            template: "./public/index.html"
         })
     ]
 };
