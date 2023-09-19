@@ -45,16 +45,13 @@ export default {
             name: "remote2",
             filename: "remoteEntry.js",
             exposes: {
-              "./HelloWorld.jsx": "./src/HelloWorld.jsx"
+                "./HelloWorld.jsx": "./src/HelloWorld.jsx"
             },
             shared: {
                 "react": {
                     singleton: true
                 },
                 "react-dom": {
-                    singleton: true
-                },
-                "react-router": {
                     singleton: true
                 },
                 "react-router-dom": {

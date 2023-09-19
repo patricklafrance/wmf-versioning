@@ -53,7 +53,13 @@ export default {
                 "react-dom": {
                     singleton: true
                 },
+                "react-router-dom": {
+                    singleton: true
+                },
                 "useless-lib": {
+                    singleton: true
+                },
+                "shared": {
                     singleton: true
                 }
             }

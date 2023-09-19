@@ -637,6 +637,8 @@ new ModuleFederationPlugin({
 - http://localhost:8080/vendors-node_modules_pnpm_react-dom_18_2_0_react_18_2_0_node_modules_react-dom_index_js.js (react-dom)
 - http://localhost:8080/main.js (useless-lib)
 
+**It is super important that `eager` is only defined in the host application. If `eager` was to be also defined for `useless-lib` in the remote modules, it would be included in all the bundles (`main.js`, `remoteEntry.js:8081`, `remoteEntry.js:8082`)**
+
 ### Using React 17 and React 18 in parallel
 
 With the following dependencies:
@@ -841,4 +843,4 @@ Bottomline, the requirements for `react-router` is to be defined as "singleton" 
 
 - Any package sharing a `React.context` must be defined as "singleton", otherwise, values will be null for remotes
 
-- Dependencies required initially should be eagerly loaded by adding `eager: true` in the host application module federation config.
+- Dependencies required initially should be eagerly loaded by adding `eager: true` in the host application module federation config BUT not in the remote module configuration.
