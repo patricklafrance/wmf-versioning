@@ -47,19 +47,24 @@ export default {
             },
             shared: {
                 "react": {
-                    singleton: true
+                    singleton: true,
+                    eager: true
                 },
                 "react-dom": {
-                    singleton: true
+                    singleton: true,
+                    eager: true
                 },
                 "react-router-dom": {
-                    singleton: true
+                    singleton: true,
+                    eager: true
                 },
                 "useless-lib": {
-                    singleton: true
+                    singleton: true,
+                    eager: true
                 },
                 "shared": {
-                    singleton: true
+                    singleton: true,
+                    eager: true
                 }
             }
         }),
