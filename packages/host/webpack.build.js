@@ -16,7 +16,9 @@ export default {
         clean: true
     },
     optimization: {
-        minimize: false
+        minimize: false,
+        chunkIds: "named",
+        moduleIds: "named"
     },
     module: {
         rules: [

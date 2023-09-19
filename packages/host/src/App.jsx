@@ -1,15 +1,33 @@
-import { Link } from "react-router-dom";
-import uselessLib from "useless-lib";
-import { version } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { AboutPage } from "./AboutPage.jsx";
+import { AnotherPage } from "./AnotherPage.jsx";
+import { AnotherAnotherPage } from "./AnotherAnotherPage.jsx";
+import { Home } from "./Home.jsx";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home />
+    },
+    {
+        path: "/another",
+        element: <AnotherPage />
+    },
+    {
+        path: "/another-another",
+        element: <AnotherAnotherPage />
+    },
+    {
+        path: "/about",
+        element: <AboutPage />
+    }
+]);
 
 export function App() {
     return (
-        <>
-            <div>Hello from host application <strong>(react v{version} - useless-lib v{uselessLib.version})</strong></div>
-            <ul>
-                <li><Link to="/another">Another page</Link></li>
-                <li><Link to="/another-another">Another Another page</Link></li>
-            </ul>
-        </>
+        <RouterProvider
+            router={router}
+            fallbackElement={<div>Loading...</div>}
+        />
     );
 }
